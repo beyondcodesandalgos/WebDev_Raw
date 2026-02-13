@@ -1,56 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Form Practice</title>
-    <link rel="stylesheet" href="27styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Form</title>
+  <link rel="stylesheet" href="./27styles.css">
 </head>
 <body>
 
-    <div class="form-container">
-        <h1>Practice Form</h1>
-        <p>Fill in the form below to practice using different input fields.</p>
+  <div class="form-container">
+    <h1>Practice Form</h1>
+    <p>Fill in the form below to practice using different input fields.</p>
 
-        <form action="#" method="POST">
-            
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    <form action="#" method="POST">
+      <div class="input-group">
+        <input type="text" id="name" name="name" placeholder=" " required>
+        <label for="name">Full Name</label>
+      </div>
 
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      <div class="input-group">
+        <input type="email" id="email" name="email" placeholder=" " required>
+        <label for="email">Email Address</label>
+      </div>
 
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age" placeholder="Enter your age" required>
+      <div class="input-group">
+        <input type="number" id="age" name="age" placeholder=" " required>
+        <label for="age">Age</label>
+      </div>
 
-            <label for="gender">Gender:</label>
-            <select id="gender" name="gender" required>
-                <option value="">Select</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-            </select>
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" required>
+        <option value="">Select</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
 
-            <fieldset>
-                <legend>Preferred Contact Method</legend>
-                <label><input type="radio" name="contact" value="email" required> Email</label>
-                <label><input type="radio" name="contact" value="phone"> Phone</label>
-            </fieldset>
+      <fieldset>
+        <legend>Preferred Contact Method</legend>
+        <label class="custom-radio">
+          <input type="radio" name="contact" value="email" required>
+          <span class="checkmark"></span> Email
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="contact" value="phone">
+          <span class="checkmark"></span> Phone
+        </label>
+      </fieldset>
 
-            <fieldset>
-                <legend>Hobbies</legend>
-                <label><input type="checkbox" name="hobbies" value="coding"> Coding</label>
-                <label><input type="checkbox" name="hobbies" value="gaming"> Gaming</label>
-                <label><input type="checkbox" name="hobbies" value="reading"> Reading</label>
-                <label><input type="checkbox" name="hobbies" value="sports"> Sports</label>
-            </fieldset>
+      <fieldset>
+        <legend>Hobbies</legend>
+        <label class="custom-checkbox">
+          <input type="checkbox" name="hobbies" value="coding">
+          <span class="checkmark"></span> Coding
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox" name="hobbies" value="gaming">
+          <span class="checkmark"></span> Gaming
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox" name="hobbies" value="reading">
+          <span class="checkmark"></span> Reading
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox" name="hobbies" value="sports">
+          <span class="checkmark"></span> Sports
+        </label>
+      </fieldset>
 
-            <label for="comments">Additional Comments:</label>
-            <textarea id="comments" name="comments" rows="4" placeholder="Write something..."></textarea>
+      <div class="input-group">
+        <textarea id="comments" name="comments" rows="4" placeholder=" "></textarea>
+        <label for="comments">Additional Comments</label>
+      </div>
 
-            <button type="submit" class="submit-btn">Submit</button>
-        </form>
-    </div>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
 
 </body>
 </html>

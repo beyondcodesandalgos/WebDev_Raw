@@ -1,45 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nature Wonders</title>
-    <link rel="stylesheet" href="./25styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nature Wonders</title>
+  <link rel="stylesheet" href="./25styles.css">
 </head>
 <body>
 
-    <header>
-        <h1>The Beauty of Nature</h1>
-        <p>Discover the breathtaking landscapes, diverse ecosystems, and fascinating wildlife that make up our planet.</p>
-    </header>
+  <header>
+    <h1>The Beauty of Nature</h1>
+    <p>Discover breathtaking landscapes, diverse ecosystems, and fascinating wildlife that make up our planet.</p>
+  </header>
 
-    <section id="forests">
-        <h2>Magnificent Forests</h2>
+  <main>
+    <section id="forests" class="reveal">
+      <div class="content">
         <img src="forest.jpg" alt="A beautiful forest landscape">
-        <p>Forests are home to countless species of flora and fauna. They provide fresh air, absorb carbon dioxide, and act as a natural shelter for wildlife. From the towering Amazon rainforest to the serene pine forests, nature’s green giants remind us of the importance of conservation.</p>
+        <div class="text">
+          <h2>🌲 Magnificent Forests</h2>
+          <p>Forests are the lungs of our planet, home to countless species of flora and fauna. They provide fresh air, absorb carbon dioxide, and act as natural sanctuaries for wildlife.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="oceans">
-        <h2>The Vast Oceans</h2>
+    <section id="oceans" class="reveal">
+      <div class="content reverse">
         <img src="ocean.jpg" alt="A stunning ocean view">
-        <p>Covering over 70% of the Earth’s surface, oceans play a crucial role in regulating climate and supporting marine life. The rhythmic waves and deep blue waters harbor coral reefs, mysterious creatures, and vital ecosystems that sustain life on Earth.</p>
+        <div class="text">
+          <h2>🌊 The Vast Oceans</h2>
+          <p>Covering over 70% of the Earth's surface, oceans regulate climate and support marine life. Their rhythmic waves and deep waters harbor coral reefs, fish, and mysteries yet to be discovered.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="mountains">
-        <h2>Majestic Mountains</h2>
+    <section id="mountains" class="reveal">
+      <div class="content">
         <img src="mountain.jpg" alt="Snow-capped mountain peaks">
-        <p>Mountains rise to incredible heights, offering breathtaking views and challenging adventures. They influence climate patterns and are home to unique species adapted to high-altitude conditions. From the Himalayas to the Rockies, these towering wonders define the natural landscape.</p>
+        <div class="text">
+          <h2>⛰️ Majestic Mountains</h2>
+          <p>Mountains rise to incredible heights, offering breathtaking views and adventurous challenges. They shape climate patterns and host unique species adapted to high altitudes.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="wildlife">
-        <h2>Diverse Wildlife</h2>
+    <section id="wildlife" class="reveal">
+      <div class="content reverse">
         <img src="wildlife.jpg" alt="A group of animals in the wild">
-        <p>Nature thrives with biodiversity—from mighty predators to delicate pollinators. Each species plays a role in the delicate balance of ecosystems. Conservation efforts worldwide strive to protect endangered animals and preserve their habitats for future generations.</p>
+        <div class="text">
+          <h2>🦁 Diverse Wildlife</h2>
+          <p>From mighty predators to delicate pollinators, wildlife thrives in diverse ecosystems. Each species plays a vital role in maintaining balance, reminding us of the importance of conservation.</p>
+        </div>
+      </div>
     </section>
+  </main>
 
-    <footer>
-        <p>© 2025 Nature Wonders | Explore, Protect, Preserve</p>
-    </footer>
+  <footer>
+    <p>© 2025 WebDev34 · Dhwani</p>
+  </footer>
+
+  <script>
+    // Scroll reveal animation
+    const reveals = document.querySelectorAll(".reveal");
+    window.addEventListener("scroll", () => {
+      for (let r of reveals) {
+        const windowHeight = window.innerHeight;
+        const elementTop = r.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100) {
+          r.classList.add("active");
+        }
+      }
+    });
+  </script>
 
 </body>
 </html>
